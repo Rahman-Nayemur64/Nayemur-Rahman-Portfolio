@@ -1,0 +1,74 @@
+/* Base: design tokens, reset, typography and page-wide layout.
+   Look: dark "data lab". Deep near-black canvas, glassy cards with hairline borders,
+   one violet accent (with a cool cyan tint used only inside gradients). */
+
+:root{
+  /* Surfaces */
+  --bg:#06060a;
+  --surface:rgba(18,18,28,.62);
+  --surface-solid:#101018;
+  --surface-2:rgba(255,255,255,.035);
+  --line:rgba(255,255,255,.08);
+  --line-strong:rgba(255,255,255,.14);
+
+  /* Text */
+  --fg:#f0f0f7; --muted:#a1a1b5; --dim:#6b6b82;
+
+  /* Accent */
+  --accent:#8f80f7; --accent-soft:#b8aeff; --accent-bg:rgba(143,128,247,.12);
+  --accent-2:#67e8f9;
+  --grad:linear-gradient(110deg,#c4bbff 0%,#8f80f7 45%,#67e8f9 100%);
+  --ok:#4ade80; --warn:#fbbf24; --err:#f87171;
+
+  /* Type */
+  --font-display:'Space Grotesk','Inter',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+
+  /* Layout */
+  --maxw:1180px;
+  --gutter:max(20px,env(safe-area-inset-left,0px));
+  --radius:18px;
+  --radius-sm:12px;
+  --shadow:0 24px 60px -28px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:rgba(143,128,247,.35);color:#fff}
+
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px;border-radius:8px}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;text-wrap:balance;letter-spacing:-.025em;line-height:1.1}
+p{margin:0}
+img{max-width:100%;display:block}
+ul,ol{margin:0;padding:0;list-style:none}
+[hidden]{display:none!important}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+.mono{font-family:var(--font-mono)}
+
+/* Background layers: star canvas + soft colour glows, both behind the content */
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.75}
+.bg-glow{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 85% -10%,rgba(143,128,247,.16),transparent 65%),
+    radial-gradient(700px 480px at -10% 30%,rgba(103,232,249,.06),transparent 70%),
+    radial-gradient(800px 600px at 50% 120%,rgba(143,128,247,.10),transparent 70%)}
+main,header.nav,footer{position:relative;z-index:1}
+
+.section{padding-block:110px 20px}
+@media(max-width:700px){.section{padding-block:80px 10px}}
+
+/* Banner shown if the JSON data files fail to load */
+.load-error{position:relative;z-index:70;max-width:var(--maxw);margin:96px auto 0;padding:14px 18px;border:1px solid var(--err);border-radius:10px;background:rgba(248,113,113,.1);color:var(--fg);font-size:14px}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}

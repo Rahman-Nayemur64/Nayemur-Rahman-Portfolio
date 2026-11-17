@@ -1,0 +1,32 @@
+/* Floating pill navigation + scroll progress bar. */
+
+.scroll-progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:80;background:var(--grad);transform-origin:0 50%;transform:scaleX(0)}
+
+header.nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:0;right:0;z-index:50;padding-inline:var(--gutter);pointer-events:none}
+.nav-in{pointer-events:auto;max-width:var(--maxw);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:0 10px 0 20px;border:1px solid var(--line);border-radius:18px;background:rgba(10,10,16,.55);
+  backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);transition:background .3s,border-color .3s,box-shadow .3s}
+header.nav.scrolled .nav-in{background:rgba(10,10,16,.82);border-color:var(--line-strong);box-shadow:var(--shadow)}
+
+.logo{font-family:var(--font-mono);font-size:15px;color:var(--fg);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.logo b{color:var(--accent-soft);font-weight:500}
+
+#navList{display:flex;align-items:center;gap:2px}
+#navList a{display:block;padding:8px 14px;font-size:14px;color:var(--muted);border-radius:10px;transition:color .2s,background .2s}
+#navList a:hover{color:var(--fg)}
+#navList a.on{color:var(--fg);background:rgba(255,255,255,.07)}
+
+.menu-btn{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2);cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:12px;right:12px;height:1.5px;background:var(--fg);border-radius:2px;transition:transform .25s,top .25s}
+.menu-btn span:first-child{top:16px}
+.menu-btn span:last-child{top:24px}
+.menu-btn[aria-expanded="true"] span:first-child{top:20px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{top:20px;transform:rotate(-45deg)}
+
+@media(max-width:860px){
+  .menu-btn{display:block}
+  .nav-in{position:relative}
+  #navList{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;padding:10px;
+    border:1px solid var(--line-strong);border-radius:18px;background:rgba(12,12,19,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:var(--shadow)}
+  #navList.open{display:flex}
+  #navList a{padding:13px 14px;font-size:16px}}

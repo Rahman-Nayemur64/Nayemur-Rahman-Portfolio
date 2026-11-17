@@ -1,0 +1,51 @@
+[
+  {
+    "type": "work",
+    "logo": "eChithi",
+    "name": "eChithi",
+    "role": "Research Executive, R&D Department",
+    "when": "Jul 2025 – Sep 2025",
+    "description": "Worked in the Department of Research and Development.",
+    "highlight": true
+  },
+  {
+    "type": "education",
+    "logo": "UAP",
+    "name": "University of Asia Pacific",
+    "role": "B.Sc. in Computer Science & Engineering",
+    "when": "2022 – 2025 · CGPA 3.37",
+    "description": "Mars rover and RM22 robot group projects. Thesis on cyber attacks in V2V communication."
+  },
+  {
+    "type":"award",
+    "logo": "UAP",
+    "name": "University of Asia Pacific",
+    "role": "Dean's List",
+    "when": "2022 – 2025",
+    "description": "Awarded for academic excellence in the B.Sc. program."
+  },
+  {
+    "type": "research",
+    "logo": "IEEE",
+    "name": "IEEE Xplore",
+    "role": "Published author, 2 papers",
+    "when": "FSO communication · V2V security",
+    "description": "Peer-reviewed work on spectrum sliced-FSO systems and V2V cyber-attacks."
+  },
+  {
+    "type": "award",
+    "logo": "RC",
+    "name": "Robotics Club, CSE-UAP",
+    "role": "2nd Runner Up, ROBO EXPO 2.0 Hackathon",
+    "when": "24 Nov 2024",
+    "description": "Awarded a Certificate of Achievement in the hackathon."
+  },
+  {
+    "type": "award",
+    "logo": "BS",
+    "name": "BEAR Summit & Semiconductor Symposium",
+    "role": "Finalist, Cybersecurity Poster Display",
+    "when": "16–17 Jul 2025",
+    "description": "Also showcased a project at the Cybersecurity Innovation Pavilion."
+  }
+]

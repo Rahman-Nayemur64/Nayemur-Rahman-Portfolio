@@ -1,0 +1,112 @@
+{
+  "categories": ["All", "Machine Learning", "Data Analytics", "Power BI", "Python Apps", "Research", "Robotics & IoT"],
+  "items": [
+    {
+      "category": "Machine Learning",
+      "name": "Movie Recommendation System",
+      "featured": true,
+      "demo": "https://movierecomsystem-kwmsgkdp4hsa6z2hhsvowa.streamlit.app/",
+      "points": [
+        "Content-based recommender using TF-IDF vectors and cosine similarity on movie metadata.",
+        "FastAPI backend for model inference, with similarity matrices serialized as .pkl files.",
+        "Streamlit interface with TMDB API integration for real-time recommendations."
+      ],
+      "tags": ["Python", "Scikit-learn", "FastAPI", "Streamlit"]
+    },
+    {
+      "category": "Machine Learning",
+      "name": "Demand Forecasting App",
+      "featured": true,
+      "demo": "https://demand-forecast-kkt57qsc5tuw3sq3pckqst.streamlit.app/",
+      "points": [
+        "Predicts product demand from price, discount, inventory, promotion, competitor pricing and category.",
+        "Preprocessing, categorical encoding and feature preparation before modelling.",
+        "Streamlit app serving a trained XGBoost model for instant predictions."
+      ],
+      "tags": ["Python", "Pandas", "XGBoost", "Streamlit"]
+    },
+    {
+      "category":"Machine Learning",
+      "name": "Student Result Predictor",
+      "repo": "https://github.com/Rahman-Nayemur64/student_result_predictor",
+      "demo": "https://student-result-predictor.streamlit.app/",
+      "points": [
+        "Predicts student results based on attendance, assignment scores, and exam performance.",
+        "Data preprocessing, feature engineering, and model training using scikit-learn.",
+        "Implemented a user-friendly interface for inputting student data and receiving predictions."
+      ],
+      "tags": ["Python", "Scikit-learn", "Data Preprocessing", "Feature Engineering"]
+    },
+    {
+      "category": "Data Analytics",
+      "name": "E-commerce Data Analysis & Dashboard",
+      "points": [
+        "Exploratory analysis of sales patterns, trends and business insights.",
+        "Cleaned and transformed datasets with Python and Pandas.",
+        "Built data visualizations and an interactive dashboard."
+      ],
+      "tags": ["Python", "Pandas", "NumPy", "Matplotlib"]
+    },
+    {
+      "category": "Power BI",
+      "name": "Customer Service Analytics Dashboard",
+      "repo": "https://github.com/Rahman-Nayemur64/customer_service_analytics_dashbord_PowerBi",
+      "points": [
+        "Interactive Power BI report (.pbix) analyzing customer service data.",
+        "Built on an Excel dataset, with the report file and data published in the repository."
+      ],
+      "tags": ["Power BI", "Excel", "Dashboard", "Data Visualization"]
+    },
+    {
+      "category": "Python Apps",
+      "name": "Screen Time Tracker App",
+      "repo": "https://github.com/Rahman-Nayemur64/Screen_Time_Tracker_App",
+      "points": [
+        "Screen time tracking application built around a Python script (App.py).",
+        "Stores usage data in a local database file and ships with its own icon set."
+      ],
+      "tags": ["Python", "Database", "Desktop App"]
+    },
+    {
+      "category": "Research",
+      "name": "Cyber Attacks on V2V Communication",
+      "link": { "label": "Read paper", "url": "https://ieeexplore.ieee.org/abstract/document/11546163" },
+      "points": [
+        "B.Sc. thesis and IEEE paper studying cyber-attacks on vehicle-to-vehicle networks.",
+        "Second IEEE paper evaluates spectrum sliced-FSO systems with different modulation schemes."
+      ],
+      "tags": ["IEEE", "V2V", "Cybersecurity", "FSO"]
+    },
+    {
+      "category": "Research",
+      "name": "Spectrum Sliced-FSO Systems",
+      "link": { "label": "Read paper", "url": "https://ieeexplore.ieee.org/abstract/document/11546163" },
+      "points": [
+        "Second IEEE paper evaluates spectrum sliced-FSO systems with different modulation schemes.",
+        "Analyzed performance metrics like bit error rate, signal-to-noise ratio, and data throughput."
+      ],
+      "tags": ["IEEE", "FSO", "Modulation", "Performance Analysis"]
+
+    },
+
+
+    {
+      "category": "Robotics & IoT",
+      "name": "RM22: IoT Research & Educational Robot",
+      "points": [
+        "Team build of a mobile robot platform on ESP8266 (NodeMCU) with dual DC motors and a motor driver.",
+        "Wi-Fi remote control, motor direction and speed control, and power distribution."
+      ],
+      "tags": ["ESP8266", "NodeMCU", "IoT", "C"]
+    },
+    {
+      "category": "Robotics & IoT",
+      "name": "Mars Rover Prototype",
+      "points": [
+        "Designed and developed a rover prototype with a university team.",
+        "Applied robotics concepts, system integration and collaborative problem-solving."
+      ],
+      "tags": ["Robotics", "Systems integration", "Teamwork"]
+    }
+  ]
+}

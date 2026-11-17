@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Nayemur Rahman, Data Scientist and ML Developer. Projects, experience and contact.">
+<title>Nayemur Rahman Portfolio</title>
+<meta name="theme-color" content="#06060a">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+<!-- Link previews (LinkedIn, WhatsApp, Facebook, X).
+     AFTER PUBLISHING: replace SITE_URL below with the live address, e.g. https://username.github.io/portfolio
+     Most apps only show the image when og:image is a full https:// address. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nayemur Rahman · Data Scientist & ML Developer">
+<meta property="og:description" content="Machine learning apps with live demos, data analysis, research and robotics projects. Open to Data Science & ML roles.">
+<meta property="og:url" content="SITE_URL/">
+<meta property="og:image" content="SITE_URL/assets/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nayemur Rahman · Data Scientist & ML Developer">
+<meta name="twitter:description" content="Machine learning apps with live demos, data analysis, research and robotics projects.">
+<meta name="twitter:image" content="SITE_URL/assets/images/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<!-- Skill + social logos (Devicon icon font) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<!-- Styles: base + shared components, then one file per page section -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections/nav.css">
+<link rel="stylesheet" href="css/sections/hero.css">
+<link rel="stylesheet" href="css/sections/projects.css">
+<link rel="stylesheet" href="css/sections/skills.css">
+<link rel="stylesheet" href="css/sections/experience.css">
+<link rel="stylesheet" href="css/sections/about.css">
+<link rel="stylesheet" href="css/sections/contact.css">
+<link rel="stylesheet" href="css/sections/footer.css">
+<link rel="stylesheet" href="css/cursor.css">
+</head>
+<body>
+<!--
+  Page layout only. All the text, projects, skills etc. live in the JSON files in /data
+  and are filled into the empty containers below (the elements with an id) by js/components/.
+-->
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Home"><b>&lt;/&gt;</b> <span id="logoName"></span></a>
+    <ul id="navList">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO (data/profile.json → hero, terminal, stats) -->
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <span class="hero-badge"><i class="dot-live"></i><span id="heroStatus"></span></span>
+      <p class="hero-hello">Hi, I'm <span id="heroName"></span></p>
+      <h1 id="heroTitle"></h1>
+      <p class="lead" id="heroIntro"></p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Let's work together <span class="ico" data-icon="arrow"></span></a>
+        <a class="btn js-cv" href="#" download><span class="ico" data-icon="download"></span> Download CV</a>
+      </div>
+      <div class="socials" id="heroSocial"></div>
+    </div>
+    <div class="hero-visual">
+      <div class="term glow-card" role="img" aria-label="Terminal-style profile summary">
+        <div class="term-bar"><i class="dot-red"></i><i class="dot-yellow"></i><i class="dot-green"></i><span id="termPrompt"></span></div>
+        <pre id="termBody"></pre>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats-strip" id="heroStats"></div>
+  </div>
+
+  <div class="marquee" aria-label="Core tools">
+    <div class="marquee-track" id="heroTools"></div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- PROJECTS (data/projects.json) -->
+    <section id="projects" class="section">
+      <header class="sec-head">
+        <div>
+          <span class="sec-label"><b>01</b> / projects</span>
+          <h2>Featured <em>Projects</em></h2>
+        </div>
+        <p>Machine learning apps with live demos, data analysis, research and robotics builds.</p>
+      </header>
+      <div class="tabs" role="tablist" id="projTabs"></div>
+      <div class="proj-grid" id="projGrid"></div>
+    </section>
+
+    <!-- SKILLS (data/skills.json) -->
+    <section id="skills" class="section">
+      <header class="sec-head">
+        <div>
+          <span class="sec-label"><b>02</b> / skills</span>
+          <h2>Tech Stack <em>&amp; Skills</em></h2>
+        </div>
+        <p>The tools I use to clean data, train models, and put them in front of users.</p>
+      </header>
+      <div class="bento" id="skillGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE (data/experience.json) -->
+    <section id="experience" class="section">
+      <header class="sec-head">
+        <div>
+          <span class="sec-label"><b>03</b> / experience</span>
+          <h2>Experience <em>&amp; Achievements</em></h2>
+        </div>
+        <p>Industry work, university, research and competitions where I've built, published and won.</p>
+      </header>
+      <ol class="xp" id="xpList"></ol>
+    </section>
+
+    <!-- ABOUT (data/about.json + profile.json) -->
+    <section id="about" class="section">
+      <header class="sec-head">
+        <div>
+          <span class="sec-label"><b>04</b> / about</span>
+          <h2>A Little More <em>About Me</em></h2>
+        </div>
+      </header>
+      <div class="about">
+        <aside class="profile-card glow-card">
+          <div class="avatar-ring"><img class="avatar" id="profilePhoto" alt="" width="220" height="220"></div>
+          <b class="profile-name" id="aboutName"></b>
+          <span class="profile-headline" id="aboutHeadline"></span>
+          <span class="profile-loc"><span class="ico" data-icon="pin"></span><span id="aboutLocation"></span></span>
+          <div class="socials center" id="aboutSocial"></div>
+          <a class="btn primary block js-cv" href="#" download><span class="ico" data-icon="download"></span> Download CV</a>
+        </aside>
+        <div class="card bio glow-card">
+          <h3 class="card-label">&gt; about.md</h3>
+          <div id="aboutText"></div>
+        </div>
+        <div class="card glow-card">
+          <h3 class="card-label">&gt; education &amp; training</h3>
+          <ul class="tl" id="educationList"></ul>
+        </div>
+        <div class="card glow-card">
+          <h3 class="card-label">&gt; publications</h3>
+          <div class="pubs" id="publicationList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (data/profile.json → contact) -->
+    <section id="contact" class="section">
+      <div class="contact-panel">
+        <div class="contact-intro">
+          <span class="sec-label"><b>05</b> / contact</span>
+          <h2>Let's build something <em>together.</em></h2>
+          <p>Have a role, a project or a question about my work? My inbox is open, and I usually reply within a day.</p>
+          <div class="cinfo" id="contactInfo"></div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field-row">
+            <label for="cName">Name<input id="cName" placeholder="Your name" autocomplete="name"></label>
+            <label for="cEmail">Email<input id="cEmail" type="email" placeholder="you@company.com" autocomplete="email"></label>
+          </div>
+          <label for="cMsg">Message<textarea id="cMsg" placeholder="Tell me about the role or project"></textarea></label>
+          <button class="btn primary block" type="submit" id="sendBtn">Send message <span class="ico" data-icon="arrow"></span></button>
+          <div class="status" id="status" role="status"></div>
+          <div class="send-opts" id="sendOpts" hidden>
+            <span class="alt">Send your message with:</span>
+            <div class="opt-row">
+              <a class="btn" id="mailLink" href="#" target="_blank" rel="noopener"><span class="ico" data-icon="mail"></span> Gmail</a>
+              <a class="btn" id="waLink" href="#" target="_blank" rel="noopener"><span class="ico" data-icon="chat"></span> WhatsApp</a>
+            </div>
+            <a class="alt" id="mailtoLink" href="#">Use my default mail app instead</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><b>&lt;/&gt;</b> <span id="footerLogo"></span></a>
+      <span id="footerText"></span>
+    </div>
+    <nav id="footerLinks"></nav>
+  </div>
+</footer>
+
+<!-- Scripts: helpers, data loader, components, then main.js starts everything -->
+<script src="js/utils.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/data-loader.js"></script>
+<script src="js/components/hero.js"></script>
+<script src="js/components/project-art.js"></script>
+<script src="js/components/projects.js"></script>
+<script src="js/components/skills.js"></script>
+<script src="js/components/experience.js"></script>
+<script src="js/components/about.js"></script>
+<script src="js/components/profile.js"></script>
+<script src="js/components/contact-info.js"></script>
+<script src="js/components/contact-form.js"></script>
+<script src="js/components/copy-buttons.js"></script>
+<script src="js/components/nav.js"></script>
+<script src="js/components/glow-cards.js"></script>
+<script src="js/components/reveal.js"></script>
+<script src="js/components/starfield.js"></script>
+<script src="js/components/cursor.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

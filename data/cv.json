@@ -1,0 +1,22 @@
+{
+  "_note": "Extra settings for the CV only. Everything else on the CV (contact, skills, projects, education, publications, awards) comes from the other JSON files. Rebuild with scripts/build-cv.bat.",
+
+  "title": "Data Scientist | Machine Learning Developer",
+
+  "summary": "Data Scientist and Machine Learning Developer with a B.Sc. in Computer Science & Engineering from the University of Asia Pacific and completed training in Data Science & Machine Learning with Python. Builds end-to-end ML applications, from data cleaning, EDA and feature engineering to model training and deployment with FastAPI and Streamlit, including two live apps: a content-based movie recommender and an XGBoost demand forecasting tool. Published author of two IEEE papers on V2V communication security and free-space optical systems.",
+
+  "projects": [
+    "Movie Recommendation System",
+    "Demand Forecasting App",
+    "E-commerce Data Analysis & Dashboard",
+    "Customer Service Analytics Dashboard",
+    "Screen Time Tracker App",
+    "RM22: IoT Research & Educational Robot"
+  ],
+
+  "experienceBullets": {
+    "eChithi": [
+      "Worked in the Research & Development department."
+    ]
+  }
+}

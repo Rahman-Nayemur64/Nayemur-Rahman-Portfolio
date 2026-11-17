@@ -1,0 +1,52 @@
+# ------------------------------------------------------------
+# Nayemur Rahman Portfolio — files Git should NOT track
+# Everything the live site needs (index.html, css/, js/, data/,
+# assets/ including the CV PDF) is still committed.
+# ------------------------------------------------------------
+
+# Generated CV page: rebuilt from data/ by scripts/build-cv.bat.
+# (The PDF in assets/cv/ IS committed, because the site links to it.)
+cv/cv.html
+
+# Operating system junk
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editors and IDEs
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.swp
+*~
+
+# Claude Code local settings (personal, per machine)
+.claude/settings.local.json
+
+# Python (scripts/build-cv.py)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js (if a tool like "npx http-server" is ever installed locally)
+node_modules/
+npm-debug.log*
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+tmp/
+temp/
+
+# Secrets, never commit these
+.env
+.env.*
+*.pem
+*.key

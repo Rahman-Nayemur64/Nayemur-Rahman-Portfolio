@@ -1,0 +1,32 @@
+/* Experience & achievements timeline (rendered by js/components/experience.js). */
+
+.xp{position:relative;display:flex;flex-direction:column;gap:18px}
+.xp::before{content:"";position:absolute;left:31px;top:32px;bottom:32px;width:1px;background:linear-gradient(var(--accent),var(--line) 30%,var(--line) 80%,transparent)}
+
+.xp-item{display:grid;grid-template-columns:64px 1fr 180px;gap:22px;align-items:start}
+.xp-logo{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--surface-solid);border:1px solid var(--line-strong);font:600 16px var(--font-display);color:var(--accent-soft);position:relative;z-index:1}
+.xp-item.highlight .xp-logo{background:linear-gradient(135deg,#8f80f7,#5b4fd6);color:#fff;border-color:transparent;box-shadow:0 10px 30px -8px rgba(143,128,247,.7)}
+
+.xp-body{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:border-color .3s}
+.xp-item:hover .xp-body{border-color:var(--line-strong)}
+.xp-item.highlight .xp-body{border-color:rgba(143,128,247,.45);background:linear-gradient(135deg,rgba(143,128,247,.10),var(--surface) 60%)}
+.xp-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.xp-body h3{font-size:19px;font-weight:600}
+.xp-role{color:var(--fg);font-size:15px;margin-bottom:6px}
+.xp-body p{color:var(--muted);font-size:14.5px}
+.xp-when{font:500 12.5px var(--font-mono);color:var(--dim);padding-top:24px;text-align:right;line-height:1.5}
+.xp-type{font:500 11px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.xp-type.work{color:var(--ok);border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.06)}
+.xp-type.award{color:var(--warn);border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.06)}
+.xp-type.research{color:var(--accent-2);border-color:rgba(103,232,249,.3);background:rgba(103,232,249,.06)}
+.xp-type.education{color:var(--accent-soft);border-color:rgba(184,174,255,.3);background:var(--accent-bg)}
+.xp-mobile-when{display:none;font:500 12px var(--font-mono);color:var(--dim);margin-bottom:8px}
+
+@media(max-width:760px){
+  .xp::before{left:23px}
+  .xp-item{grid-template-columns:48px 1fr;gap:14px}
+  .xp-logo{width:48px;height:48px;border-radius:14px;font-size:13px}
+  .xp-when{display:none}
+  .xp-mobile-when{display:block}
+  .xp-body{padding:18px}
+}

@@ -1,0 +1,27 @@
+{
+  "groups": {
+    "Programming": ["Python", "Java", "C", "SQL"],
+    "Data Science": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    "Machine Learning": ["Scikit-learn", "XGBoost", "Linear Regression", "Logistic Regression", "Decision Tree", "KNN", "TF-IDF"],
+    "Data Analysis": ["Power BI", "EDA", "Data Cleaning", "Feature Engineering", "Data Visualization", "Statistical Analysis"],
+    "Tools": ["MySQL", "Git", "GitHub", "Streamlit", "FastAPI", "Microsoft Office", "Canva"]
+  },
+
+  "icons": {
+    "Python": "devicon-python-plain",
+    "Java": "devicon-java-plain",
+    "C": "devicon-c-plain",
+    "SQL": "devicon-azuresqldatabase-plain",
+    "Pandas": "devicon-pandas-plain",
+    "NumPy": "devicon-numpy-plain",
+    "Matplotlib": "devicon-matplotlib-plain",
+    "Jupyter Notebook": "devicon-jupyter-plain",
+    "Scikit-learn": "devicon-scikitlearn-plain",
+    "MySQL": "devicon-mysql-original",
+    "Git": "devicon-git-plain",
+    "GitHub": "devicon-github-original",
+    "Streamlit": "devicon-streamlit-plain",
+    "FastAPI": "devicon-fastapi-plain",
+    "Canva": "devicon-canva-original"
+  }
+}

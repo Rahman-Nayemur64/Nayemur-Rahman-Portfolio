@@ -1,0 +1,8 @@
+/* Page footer. */
+
+footer{margin-top:100px;border-top:1px solid var(--line);padding:36px var(--gutter) 44px;background:rgba(6,6,10,.6)}
+.foot{max-width:var(--maxw);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.foot-brand{display:flex;flex-direction:column;gap:6px;color:var(--dim);font-size:13px}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px}
+.foot nav a{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:10px;border:1px solid var(--line);color:var(--muted);font-size:13.5px;transition:color .2s,border-color .2s}
+.foot nav a:hover{color:var(--fg);border-color:var(--line-strong)}

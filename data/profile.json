@@ -1,0 +1,58 @@
+{
+  "name": "Nayemur Rahman",
+  "logo": "nayemur.rahman",
+  "pageTitle": "Nayemur Rahman Portfolio",
+  "headline": "Data Scientist & ML Developer",
+
+  "photo": "assets/images/profile.jpg",
+  "cv": "assets/cv/Nayemur_CV.pdf",
+
+  "hero": {
+    "status": ">_ Open to Data Science & ML roles",
+    "titleLine1": "Data Scientist",
+    "titleLine2": "& ML Developer",
+    "intro": "A CSE graduate from Dhaka who turns messy data into working models and deployed apps, using Python, scikit-learn, XGBoost, FastAPI and Streamlit.",
+    "coreTools": ["Python", "SQL", "Pandas", "Scikit-learn", "XGBoost", "FastAPI", "Streamlit", "Power BI"]
+  },
+
+  "stats": [
+    { "value": "12", "label": "Data, research & robotics projects" },
+    { "value": "2", "label": "IEEE papers published" },
+    { "value": "3.37", "label": "CGPA, B.Sc. in CSE" },
+    { "value": "2nd", "label": "Runner up, ROBO EXPO 2.0" }
+  ],
+
+  "terminal": {
+    "prompt": "nayemur@portfolio ~",
+    "whoami": "nayemur_rahman",
+    "profile": {
+      "role": "data_scientist, ml_developer",
+      "degree": "B.Sc. CSE, UAP (CGPA 3.37)",
+      "trained": "DS & ML with Python, Sep 2026",
+      "papers": "2 IEEE publications"
+    },
+    "skillRows": [
+      "python  sql  pandas",
+      "scikit_learn  xgboost",
+      "fastapi  streamlit  power_bi"
+    ],
+    "projects": [
+      { "folder": "movie_recommender/", "note": "live demo" },
+      { "folder": "demand_forecasting/", "note": "live demo" },
+      { "folder": "student_result_predictor/", "note": "live demo" }
+    ]
+  },
+
+  "contact": {
+    "email": "dnayemur.rahman@gmail.com",
+    "phone": "+880 1628-076461",
+    "whatsapp": "8801628076461",
+    "location": "Dhaka, Bangladesh",
+    "github": "https://github.com/Rahman-Nayemur64",
+    "githubLabel": "github.com/Rahman-Nayemur64",
+    "linkedin": "https://www.linkedin.com/in/nayem-rahman-44500a2a9/",
+    "linkedinLabel": "linkedin.com/in/nayem-rahman"
+  },
+
+  "footer": "© 2026 Nayemur Rahman · Data Science & Machine Learning"
+}

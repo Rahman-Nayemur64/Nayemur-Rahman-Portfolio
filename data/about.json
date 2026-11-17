@@ -1,0 +1,28 @@
+{
+  "paragraphs": [
+    "I'm a **Computer Science & Engineering graduate** from the University of Asia Pacific with hands-on experience in Python, SQL, machine learning and data visualization. I finished a Data Science & Machine Learning with Python course in September 2026.",
+    "My ML projects go past the notebook. The **movie recommender** runs on a FastAPI backend with a Streamlit front end, and the **demand forecasting app** serves an XGBoost model with instant predictions. Both are live.",
+    "Before data science, I built robots. I contributed to a **Mars rover prototype** and the **RM22 IoT robot** on an ESP8266, and my research on vehicle-to-vehicle security led to two IEEE papers.",
+    "I'm looking for a data science or ML role where I can ship models people use and keep learning from a strong team."
+  ],
+
+  "education": [
+    { "when": "Apr 2026 – Sep 2026", "title": "Data Science & Machine Learning with Python", "detail": "Completed" },
+    { "when": "2022 – 2025", "title": "B.Sc. in CSE, University of Asia Pacific", "detail": "CGPA 3.37 / 4.00 · Thesis: Cyber Attack on V2V Communication" },
+    { "when": "2017 – 2019", "title": "HSC, Sristy College of Tangail", "detail": "GPA 4.00 / 5.00" },
+    { "when": "2015 – 2017", "title": "SSC, Sristy Academic School, Tangail", "detail": "GPA 5.00 / 5.00" }
+  ],
+
+  "publications": [
+    {
+      "title": "Evaluation of spectrum sliced-FSO communication system incorporating different modulation schemes",
+      "venue": "IEEE Xplore",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10915819"
+    },
+    {
+      "title": "Study on Cyber-Attacks to Vehicle-to-Vehicle (V2V) Communication Networks",
+      "venue": "IEEE Xplore",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11546163"
+    }
+  ]
+}

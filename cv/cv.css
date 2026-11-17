@@ -1,0 +1,26 @@
+/* ATS-friendly CV layout: one column, standard fonts, plain headings, no tables, icons or graphics,
+   so applicant-tracking systems can read every line in order. Printed to PDF by scripts/build-cv.py. */
+
+@page{size:A4;margin:14mm 16mm}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Calibri,Arial,Helvetica,sans-serif;font-size:10.5pt;line-height:1.35;color:#111}
+a{color:#111;text-decoration:none}
+
+header{text-align:center;margin-bottom:8pt}
+h1{font-size:21pt;margin:0;letter-spacing:.5pt}
+.title{font-size:11.5pt;font-weight:bold;margin:2pt 0 4pt}
+.contact{font-size:10pt}
+
+h2{font-size:11pt;text-transform:uppercase;letter-spacing:.6pt;margin:11pt 0 5pt;padding-bottom:2pt;border-bottom:1px solid #111;break-after:avoid}
+
+p{margin:0}
+ul{margin:2pt 0 0 0;padding-left:14pt}
+li{margin:1.5pt 0}
+
+.entry{margin-bottom:7pt;break-inside:avoid}
+.entry-head{display:flex;justify-content:space-between;gap:12pt}
+.entry-head b{font-size:10.5pt}
+.entry-sub{font-style:italic}
+.tech{margin-top:2pt}
+.skills p{margin:2pt 0}
